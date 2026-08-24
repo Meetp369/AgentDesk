@@ -1,0 +1,7 @@
+{
+  "incident": "INC-1042",
+  "service": "payments",
+  "cause_type": "bad_deploy",
+  "artifact": "d-9812",
+  "summary": "Deploy d-9812 (payments v2.14.0) introduced a nil-pointer panic in vault.LookupToken, spiking payments error rate/latency and cascading into checkout p99."
+}

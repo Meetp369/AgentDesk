@@ -1,0 +1,7 @@
+{
+  "incident": "INC-1045",
+  "service": "card-vault",
+  "cause_type": "cert_expiry",
+  "artifact": "card-vault TLS cert notAfter=2026-07-17T00:00:00Z",
+  "summary": "card-vault's TLS certificate expired at midnight UTC; payments' handshakes fail (x509), cascading to checkout. The checkout deploy 20m prior is a red herring."
+}

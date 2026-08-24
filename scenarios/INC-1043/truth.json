@@ -1,0 +1,7 @@
+{
+  "incident": "INC-1043",
+  "service": "orders",
+  "cause_type": "resource_exhaustion",
+  "artifact": "pgpool size=20",
+  "summary": "Morning traffic ramp (~4x RPS) exhausted orders' fixed DB connection pool (size 20); requests queued and timed out. No deploy involved."
+}

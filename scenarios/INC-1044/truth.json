@@ -1,0 +1,7 @@
+{
+  "incident": "INC-1044",
+  "service": "api-gateway",
+  "cause_type": "config_change",
+  "artifact": "cfg-441",
+  "summary": "Config change cfg-441 dropped the gateway->search timeout from 1500ms to 300ms, below search's normal p99 (~260-300ms), turning routine requests into 504s."
+}
