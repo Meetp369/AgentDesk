@@ -1,6 +1,6 @@
 """Deterministic baseline investigator.
 
-A hand-written triage policy that uses the *same tools* as the LLM agent:
+A triage policy that uses the same tools as the LLM agent:
 
     alerts -> topology -> dependency closure -> deploys/config changes ->
     ERROR logs per suspect -> metric onset correlation -> scored hypotheses.
@@ -105,7 +105,7 @@ def run_baseline_investigation(incident_id: str,
         series = m.get("series", {}).get("error_rate_pct", [])
         onsets[svc] = _summarize_series(series).get("anomaly_onset")
 
-    # 6. Score hypotheses ------------------------------------------------
+    # 6. Score hypotheses
     hypotheses = []
 
     def proximity_score(ts: str, onset: str | None) -> float:
