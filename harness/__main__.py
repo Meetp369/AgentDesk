@@ -76,6 +76,9 @@ def _investigate(incident_id: str, mode: str):
     if mode == "llm":
         from .agent import run_llm_investigation
         result = run_llm_investigation(incident_id, on_event=_render_event)
+    else:
+        from .baseline import run_baseline_investigation
+        result = run_baseline_investigation(incident_id, on_event=_render_event)
 
     if result.error:
         console.print(f"[red]{result.error}[/red]")
