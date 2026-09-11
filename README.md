@@ -46,6 +46,8 @@ cited evidence**.
 
 Requires Go ≥1.21 and Python ≥3.10.
 
+Go not installed? macOS: `brew install go` · Ubuntu/Debian: `sudo apt-get install -y golang-go` · or https://go.dev/dl. Verify with `go version` (need ≥1.21).
+
 ```bash
 pip install -r requirements.txt
 python3 scripts/generate_scenarios.py   # regenerate fixtures (deterministic)
